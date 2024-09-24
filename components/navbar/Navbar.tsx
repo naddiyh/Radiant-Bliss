@@ -5,7 +5,7 @@ import Link from "next/link";
 import { IoIosMenu, IoIosClose } from "react-icons/io";
 import { PrimaryButton } from "@/components/atoms";
 import { useAuth } from "@/features/auth/useAuth";
-
+import Image from "next/image";
 export const Navbar = ({ showBackground = true }) => {
   const { user, handleLogOut } = useAuth();
   const [isScroll, setIsScroll] = useState(false);
@@ -39,7 +39,10 @@ export const Navbar = ({ showBackground = true }) => {
           : ""
       }`}
     >
-      <h1 className="text-2xl font-bold text-white">RadiantBliss.</h1>
+      <div className="flex items-center gap-4">
+        <Image src="/images/logoradiant.png" alt="" width={50} height={50} />
+        <h1 className="text-heading-s font-bold text-white">RadiantBliss.</h1>
+      </div>
       <div className="hidden items-center gap-2 md:flex md:gap-4">
         {navLink.map((items) => (
           <Link
