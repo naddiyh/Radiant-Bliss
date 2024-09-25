@@ -24,29 +24,45 @@ export const HomePage = () => {
   };
 
   return (
-    <section className="relative flex min-h-screen w-screen items-center px-8 md:px-28">
+    <section className="relative flex min-h-screen w-screen items-center justify-center gap-20 px-8 md:px-28">
       <Image
-        src="/images/manhaircut.webp"
+        src="/images/bg.png"
         layout="fill"
         priority
         alt="Man Haircut"
-        className="-z-10 object-cover brightness-[.4]"
+        className="-z-10 object-cover brightness-[.7]"
       />
 
-      <div className="z-20 flex flex-col gap-8 text-white lg:w-[55%]">
-        <h1 className="text-6xl font-bold md:text-8xl">
+      <h1 className="absolute top-48 flex w-full gap-36 px-[290px] font-bold">
+        <span className="text-[100px] text-[#e2bb4e]">Radiant</span>
+        <span className="z-30 text-[100px] text-white">Bliss </span>
+      </h1>
+
+      <div className="relative flex flex-col items-center justify-center pt-32">
+        <Image
+          src={"/images/man.png"}
+          width={500}
+          height={500}
+          objectFit="cover"
+          objectPosition="center"
+          alt={"Man"}
+          className=""
+        />
+      </div>
+      <div className="absolute left-[130px] top-[450px] z-20 flex flex-col gap-6 text-white lg:w-[40%]">
+        {/* <h1 className="text-6xl font-bold md:text-8xl">
           <span className="text-[#d2ac47]">Radiant</span> Bliss
-        </h1>
-        <span className="text-xl font-medium italic md:text-2xl">
+        </h1> */}
+        <span className="text-[20px] font-light italic">
           Beauty and Elegance Redefined
         </span>
-        <p className="text-lg">
+        <p className="text-text-m font-thin">
           We are dedicated to enhancing your natural beauty with our exceptional
           services. Our team of experts is committed to providing an
-          unforgettable experience tailored to meet your individual needs.
+          unforgettable experience tailored
         </p>
 
-        <div className="flex flex-col gap-8 md:flex-row">
+        <div className="flex flex-col gap-8 font-normal md:flex-row">
           <PrimaryButton fullwidth={false} onClick={handleOpen}>
             Booking
           </PrimaryButton>
